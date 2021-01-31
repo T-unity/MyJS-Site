@@ -3,14 +3,25 @@ html{
 }
 
 body{
-  background-color: black;
+  width: 60%;
+  margin: 0 auto;
+  background-color: rgb(217, 255, 251);
+  border: 5px solid black;
 }
 
 h1 {
-  font-size: 60px;
   text-align: center;
   margin: 0;
   padding: 20px 0;
   color: #00539F;
-  text-shadow: 3px 3px 1px black;
+}
+
+.top__about {
+  width: 50%;
+  background-color: rgb(255, 223, 223);
+}
+
+.top__technical {
+  width: 50%;
+  background-color: rgb(249, 250, 216);
 }
