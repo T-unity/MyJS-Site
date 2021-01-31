@@ -1,0 +1,14 @@
+html {
+  background-color: rgb(237, 237, 237);
+}
+
+#main {
+  display: inline;
+  width: 25%;
+  background-color: rgb(255, 254, 238);
+}
+
+#side {
+  width: 75%;
+  background-color: rgb(219, 219, 255);
+}
