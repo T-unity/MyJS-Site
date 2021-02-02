@@ -7,16 +7,38 @@
   <link href="assets/styles/index.css" rel="stylesheet" type="text/css">
   <script src="assets/js/index.js" defer></script>
   <!-- assets -->
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
+  <!-- fonts -->
   <title>My awesome site</title>
 </head>
 
 <body>
+  <!-- humberger menu -->
   <button class="mobile-menu-icon"
   onclick="document.querySelector('body').classList.toggle('menu-open')">
     <span></span>
     <span></span>
     <span></span>
   </button>
+  <!-- humberger menu -->
+  <!-- animation text -->
+  <div class="container">
+    <div class="animate-title inview">
+      <span class="char">A</span>
+      <span class="char">N</span>
+      <span class="char">I</span>
+      <span class="char">M</span>
+      <span class="char">A</span>
+      <span class="char">T</span>
+      <span class="char">I</span>
+      <span class="char">O</span>
+      <span class="char">N</span>
+    </div>
+    <button onclick="document.querySelector('.animate-title').classList.toggle('inview');">Animation</button>
+  </div>
+  <!-- animation text -->
 
   <!-- title -->
   <div class="top__title">

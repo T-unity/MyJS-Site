@@ -25,14 +25,12 @@ h1 {
 }
 /* common settings */
 
-
-// 
+// humberger-menu
 .mobile-menu-icon {
   background-color: transparent;
   border: none;
   outline: none !important;
   cursor: pointer;
-
   & > span {
     background-color: $cBlack;
     width: 35px;
@@ -40,7 +38,6 @@ h1 {
     display: block;
     margin-bottom: 9px;
     transition: transform 0.7s;
-
     &:last-child {
       margin-bottom: 0;
     }
@@ -49,11 +46,9 @@ h1 {
 
 .menu-open {
   background-color: $cBlack;
-
   & .mobile-menu-icon {
     & > span {
       background-color: $cWhite;
-
       &:nth-child(1) {
         transform: translateY(11px) rotate(135deg);
       }
@@ -66,9 +61,55 @@ h1 {
     }
   }
 }
-
-
 /* humberger menu */
+// animation text
+@import 'mixin';
+.container {
+  position: relative;
+  height: 50vh;
+}
+
+.animate-title {
+  font-family: 'Teko', sans-serif;
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+  opacity: 0;
+
+  &.inview {
+    opacity: 1;
+    & .char {
+      display: inline-block;
+      @include animation($name: kf-animate-chars,
+        $duration: 0.5s,
+        $timing-function: cubic-bezier(0.39, 1.57, 0.58, 1),
+        $fill-mode: both
+        );
+
+        @for $i from 1 through 9 {
+          &:nth-child(#{$i}) {
+            animation-delay: $i * 0.04s;
+          }
+        }
+    }
+  }
+}
+
+@keyframes kf-animate-chars {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+// animation text
+
 .header {
   margin: 0 auto;
 }
@@ -102,6 +143,8 @@ h1 {
   to { opacity: 1; }
 }
 /* humberger menu */
+
+
 
 .header__logo {
   float: left;
