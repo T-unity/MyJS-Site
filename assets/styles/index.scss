@@ -1,17 +1,16 @@
+$cBlack: black;
+
 /* common settings */
 html {
-  background-color: #f2f2f2;
+  background-color: rgb(242, 242, 242);
 }
 
 body {
   width: 80%;
   margin: 0 auto;
-  background-color: #d9fffb;
-  border: 1px solid #dedede;
-}
-
-@media (max-width: 767px) {
-  body {
+  background-color: rgb(217, 255, 251);
+  border: 1px solid rgb(222, 222, 222);
+  @media (max-width: 767px) {
     width: 100%;
     border: none;
   }
@@ -23,19 +22,24 @@ h1 {
   padding: 20px 0;
   color: #00539F;
 }
-
 /* common settings */
+
+
+// 
 .mobile-menu-icon {
   background-color: transparent;
   border: none;
+
+  & > span {
+    background-color: $cBlack;
+    width: 35px;
+    height: 2px;
+    display: block;
+  }
 }
 
-.mobile-menu-icon > span {
-  background-color: black;
-  width: 35px;
-  height: 2px;
-  display: block;
-}
+
+
 
 /* humberger menu */
 .header {
@@ -64,29 +68,14 @@ h1 {
 
 #nav-input:checked ~ nav {
   display: block;
-  -webkit-animation: 1s fadeIn;
-          animation: 1s fadeIn;
+  animation: 1s fadeIn;
 }
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
-
 /* humberger menu */
+
 .header__logo {
   float: left;
   font-size: 25px;
@@ -101,21 +90,21 @@ h1 {
 
 .top__title {
   width: 80%;
-  border: 3px solid #a8a8f2;
+  border: 3px solid rgb(168, 168, 242);
 }
 
 .top__about {
   width: 50%;
-  background-color: #ffdfdf;
+  background-color: rgb(255, 223, 223);
 }
 
 .top__technical {
   width: 50%;
-  background-color: #f9fad8;
+  background-color: rgb(249, 250, 216);
 }
 
 .footer {
-  background-color: #fcffdc;
+  background-color: rgb(252, 255, 220);
   height: 100px;
 }
 
@@ -134,4 +123,3 @@ h1 {
 .footer__list li {
   list-style: none;
 }
-/*# sourceMappingURL=index.css.map */
